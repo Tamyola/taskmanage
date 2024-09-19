@@ -27,6 +27,7 @@ export class UserService {
    * This method is used to create a new user in the database.
    * @param user - User data to create a new user.
    */
+
   async createUser(user: User) {
     user.password = CoreUtils.hashPassword(user.password);
     const newUser = this.userRepository.create(user);

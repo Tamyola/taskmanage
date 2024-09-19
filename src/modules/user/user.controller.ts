@@ -66,6 +66,7 @@ export class UserController {
         message: 'User created',
       });
     } catch (error) {
+      console.log("error from user create", error)
       this.logger.error(error.message);
       return response.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
         statusCode: HttpStatus.INTERNAL_SERVER_ERROR,

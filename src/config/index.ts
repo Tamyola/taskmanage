@@ -9,8 +9,8 @@ interface iConfig {
   database: PostgresConnectionOptions;
   env: string;
   keys: {
-    privateKey: string;
-    publicKey: string;
+    // privateKey: string;
+    // publicKey: string;
   };
   port: number;
 }
@@ -20,8 +20,8 @@ export default (): Partial<iConfig> => ({
   database: dbConfig(),
   env: process.env.NODE_ENV || 'development',
   keys: {
-    privateKey: process.env.PRIVATE_KEY.replace(/\\n/gm, '\n'),
-    publicKey: process.env.PUBLIC_KEY.replace(/\\n/gm, '\n'),
+    // privateKey: process.env.PRIVATE_KEY.replace(/\\n/gm, '\n'),
+    // publicKey: process.env.PUBLIC_KEY.replace(/\\n/gm, '\n'),
   },
   port: parseInt(process.env.PORT, 10) || 3080,
 });

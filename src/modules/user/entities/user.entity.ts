@@ -3,7 +3,7 @@ import { Task } from '../../task/entities/task.entity';
 import { Role } from '../../../common/enums/role.enum';
 import { AutoMap } from '@automapper/classes';
 
-@Entity({ name: 'user' })
+@Entity({ name: "user" })
 export class User {
   @PrimaryGeneratedColumn()
   id: number;
